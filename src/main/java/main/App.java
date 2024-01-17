@@ -18,7 +18,7 @@ public class App
                 String stringInput = sc.nextLine();
                 i = Integer.parseInt(stringInput);
 
-                try {
+                // try {
                 switch (i) {
                     case 1:
                         System.out.println("What does hedgehog say?");
@@ -47,11 +47,11 @@ public class App
                         System.out.println("Wrong input!");;
                         break;
                 }
-                } 
-                catch(Exception e) {
-                        System.out.println("Wrong input value");
+                // } 
+                // catch(Exception e) {
+                //         System.out.println("Wrong input value");
                         
-                }   
+                // }   
             }
         }
         
