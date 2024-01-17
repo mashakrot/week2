@@ -8,7 +8,7 @@ public class App
     {
         Scanner sc = new Scanner(System.in);
 
-        Hedgehog newHedgehog = new Hedgehog();;
+        Hedgehog newHedgehog = new Hedgehog();
         boolean exit = false;
         while(!exit) {
             System.out.println("1) Make hedgehog talk, 2) Create new hedgehog, 3) Make hedgehog run, 0) Quit");
@@ -22,10 +22,13 @@ public class App
                     case 1:
                         System.out.println("What does hedgehog say?");
                         String line = sc.nextLine();
-                        
-                        String text =  newHedgehog.printName();
-                        // text = text.concat(line);
-                        System.out.println(text + ": " + line);
+                        if (line.isEmpty()){
+                            newHedgehog.printString();
+                        } else {   
+                            String text =  newHedgehog.printName();
+                            // text = text.concat(line);
+                            System.out.println(text + ": " + line);
+                        }
                         
                         break;
                     

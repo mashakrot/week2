@@ -14,4 +14,9 @@ public class Hedgehog
         // System.out.println(name);
         return name;
     }
+
+    public void printString(){
+        System.out.println("I am " + name + " and my age is " + age + ", but could you still give me input values?");
+    }
 }
+
