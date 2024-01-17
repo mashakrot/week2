@@ -1,28 +1,49 @@
 package main;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class App 
 {
-    public static void speak(String userInput, String name)
-    {
-        System.out.println(name + ": " + userInput);
-        
-    }
-
-
     public static void main( String[] args )
     {
-        Hedgehog hedgehog1 = new Hedgehog();
+        Scanner sc = new Scanner(System.in);
 
-        hedgehog1.name = "Pikseli";
-        hedgehog1.age = 5;
-        hedgehog1.display();
+        Hedgehog newHedgehog = new Hedgehog();;
+        boolean exit = false;
+        while(!exit) {
+            System.out.println("1) Make hedgehog talk, 2) Create new hedgehog, 3) Make hedgehog run, 0) Quit");
+            
+            if(sc.hasNext()) {
+                int i = 0;
+                String stringInput = sc.nextLine();
+                i = Integer.parseInt(stringInput);
 
-        Scanner myObj = new Scanner(System.in);
-        System.out.println("What does hedgehog say?");
+                switch (i) {
+                    case 1:
+                        System.out.println("What does hedgehog say?");
+                        String line = sc.nextLine();
+                        
+                        String text =  newHedgehog.printName();
+                        // text = text.concat(line);
+                        System.out.println(text + ": " + line);
+                        
+                        break;
+                    
+                    case 0:
+                        System.out.println("Thank you for using the program.");
+                        exit = true;
+                        break;
 
-        String userInput = myObj.nextLine();
-        speak(userInput, hedgehog1.name);
+                    default:
+                        System.out.println("Wrong input!");;
+                        break;
+                }
+
+            }
+            
+        }
+        
+
     }
 }
 

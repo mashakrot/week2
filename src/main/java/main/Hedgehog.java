@@ -2,8 +2,16 @@ package main;
 
 public class Hedgehog 
 {
-    String name;
-    int age;
+    private String name;
+    private int age;
 
-    public void display() {}
+    public Hedgehog() {
+        name = "Pikseli";
+        age = 5;
+    }
+
+    public String printName(){
+        // System.out.println(name);
+        return name;
+    }
 }
