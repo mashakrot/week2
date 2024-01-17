@@ -29,14 +29,20 @@ public class App
                             // text = text.concat(line);
                             System.out.println(text + ": " + line);
                         }
-                        
                         break;
-                    
+                    case 2:
+                        System.out.println("What is the name of the hedgehog:");
+                        String name = sc.nextLine();
+                        System.out.println("What is the age of the hedgehog:");
+                        String ageStr = sc.nextLine();
+                        int age = Integer.parseInt(ageStr);
+
+                        newHedgehog = new Hedgehog(name, age);
+                        break;
                     case 0:
                         System.out.println("Thank you for using the program.");
                         exit = true;
                         break;
-
                     default:
                         System.out.println("Wrong input!");;
                         break;
