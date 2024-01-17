@@ -55,7 +55,7 @@ public class App
                         exit = true;
                         break;
                     default:
-                        System.out.println("Wrong input!");;
+                        System.out.println("Wrong input value");;
                         break;
                 }
                   
