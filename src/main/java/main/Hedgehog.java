@@ -23,5 +23,12 @@ public class Hedgehog
     public void printString(){
         System.out.println("I am " + name + " and my age is " + age + ", but could you still give me input values?");
     }
+    
+    public void hisRunning(int laps){
+        for (int i =1; i <= laps; i++) {
+            System.out.println(name + " runs really fast!");
+            
+        }
+    }
 }
 

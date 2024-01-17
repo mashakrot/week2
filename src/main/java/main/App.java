@@ -18,7 +18,7 @@ public class App
                 String stringInput = sc.nextLine();
                 i = Integer.parseInt(stringInput);
 
-                // try {
+                
                 switch (i) {
                     case 1:
                         System.out.println("What does hedgehog say?");
@@ -31,14 +31,25 @@ public class App
                         }
                         break;
                     case 2:
+                    try {
                         System.out.println("What is the name of the hedgehog:");
-                            
                         String name = sc.nextLine();
                         System.out.println("What is the age of the hedgehog:");
                         String ageStr = sc.nextLine();
                         int age = Integer.parseInt(ageStr);
                         
                         newHedgehog = new Hedgehog(name, age);                            break;
+                    } 
+                    catch(Exception e) {
+                        System.out.println("Wrong input value");
+                        break;
+                    } 
+                    case 3:
+                        System.out.println("How many laps?");
+                        String lapsStr = sc.nextLine();
+                        int laps = Integer.parseInt(lapsStr);
+                        newHedgehog.hisRunning(laps);
+                        break;
                     case 0:
                         System.out.println("Thank you for using the program.");
                         exit = true;
@@ -47,11 +58,7 @@ public class App
                         System.out.println("Wrong input!");;
                         break;
                 }
-                // } 
-                // catch(Exception e) {
-                //         System.out.println("Wrong input value");
-                        
-                // }   
+                  
             }
         }
         
