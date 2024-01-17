@@ -26,19 +26,25 @@ public class App
                             newHedgehog.printString();
                         } else {   
                             String text =  newHedgehog.printName();
-                            // text = text.concat(line);
                             System.out.println(text + ": " + line);
                         }
                         break;
                     case 2:
-                        System.out.println("What is the name of the hedgehog:");
-                        String name = sc.nextLine();
-                        System.out.println("What is the age of the hedgehog:");
-                        String ageStr = sc.nextLine();
-                        int age = Integer.parseInt(ageStr);
-
-                        newHedgehog = new Hedgehog(name, age);
-                        break;
+                        try {
+                            System.out.println("What is the name of the hedgehog:");
+                            
+                            String name = sc.nextLine();
+                            System.out.println("What is the age of the hedgehog:");
+                            String ageStr = sc.nextLine();
+                            int age = Integer.parseInt(ageStr);
+                            
+                            newHedgehog = new Hedgehog(name, age);
+                            break;
+                        } 
+                        catch(Exception e) {
+                            System.out.println("Wrong input value");
+                            break;
+                        }
                     case 0:
                         System.out.println("Thank you for using the program.");
                         exit = true;
