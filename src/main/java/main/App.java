@@ -20,7 +20,6 @@ public class App
 
         Scanner myObj = new Scanner(System.in);
         System.out.println("What does hedgehog say?");
-        myObj.close();
 
         String userInput = myObj.nextLine();
         speak(userInput, hedgehog1.name);
