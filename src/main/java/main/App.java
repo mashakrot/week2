@@ -38,7 +38,8 @@ public class App
                         String ageStr = sc.nextLine();
                         int age = Integer.parseInt(ageStr);
                         
-                        newHedgehog = new Hedgehog(name, age);                            break;
+                        newHedgehog = new Hedgehog(name, age);                           
+                        break;
                     } 
                     catch(Exception e) {
                         System.out.println("Wrong input value");
